@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="search"><input type="text" id="bylastname" class="form-control"
+                        placeholder="Search Client by Id or Lastname or Phone" onkeyup="showclientbylastname()">
+                    <button class="btn btn-primary">Search</button>
+                </div>
+            </div>
+
+
+            <div class="col-md-8">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Last name</th>
+                                <th scope="col">First name</th>
+                                <th scope="col">Select</th>
+                            </tr>
+                            </thead>
+                            <tbody  id="printtable">
+
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="resulttable" class="row justify-content-center">
+                <div class="col-md-4">
+                    <label for="firstname" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="firstname" disabled>
+                </div>
+                <div class="col-md-4">
+                    <label for="lastname" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="lastname" disabled>
+                </div>
+        </div>
+        <div id="resulttable" class="row justify-content-center">
+                <div class="col-md-4">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" disabled>
+                </div>
+                <div class="col-md-4">
+                    <label for="state" class="form-label">State/prov</label>
+                    <input type="text" class="form-control" id="state" disabled>
+                </div>
+        </div>
+        <div id="resulttable" class="row justify-content-center">
+                <div class="col-5">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="text" class="form-control" id="email" disabled>
+                </div>
+                <div class="col-3">
+                    <label for="phone" class="form-label">Phone number</label>
+                    <input type="text" class="form-control" id="phone" disabled>
+                </div>
+        </div>        
+            <div class="buttons" >
+                <div class="col-md-3">
+                    <div class="form-check" id="pic1">
+                        <input class="form-check-input" type="radio" name="rentvehicle" id="compact">
+                        <label class="form-check-label" for="compact">
+                            Compact $15/day
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-check" id="pic2">
+                        <input class="form-check-input" type="radio" name="rentvehicle" id="mid">
+                        <label class="form-check-label" for="mid">
+                            Mid-size $20/day
+                        </label>
+                    </div>
+                </div>
+                    <div id="detail">
+            
+                    </div>
+                <div class="col-md-3">
+                    <div class="form-check" id="pic3">
+                        <input class="form-check-input" type="radio" name="rentvehicle" id="luxury">
+                        <label class="form-check-label" for="luxury">
+                            Luxury $35/day
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-check" id="pic4">
+                        <input class="form-check-input" type="radio" name="rentvehicle" id="van">
+                        <label class="form-check-label" for="van">
+                            Van/Truck $40/day
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-2">
+                    <input type="number" class="form-control" id="days" placeholder="Days" min="1" max="30" disabled>
+                </div>
+                <div class="col-md-4">
+                    <div class="col-md-2">
+                        <label for="days" class="form-label"></label>
+                    </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="roofrack">
+                    <label class="form-check-label" for="roofrack">
+                        Roof Rack or Bicycle Rack extra $5/day
+                    </label>
+                </div>
+                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="gps">
+                        <label class="form-check-label" for="gps">
+                            GPS extra $10
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="childseat">
+                        <label class="form-check-label" for="childseat">
+                            Child Seat free
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+            </div>
+            <div class="d-grid gap-2" id="btn">
+                <button class="btn btn-primary" type="button" onclick="printresult()">Submit</button>
+            </div>
+            <div id="result">
+            </div>
+        </div>
+        </div>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

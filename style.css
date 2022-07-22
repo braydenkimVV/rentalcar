@@ -1,0 +1,106 @@
+body{
+    text-align: center;
+    background-image: url("./cars/rental.jpg");
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* margin-bottom: 100px; */
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 900;
+    color: blue;
+}
+#now{
+    color: black;
+    font-weight: 600;
+}
+.link{
+    font-size: 30px;
+}
+.logo{
+    width: 100px;
+  height: 100px; 
+  vertical-align: middle; 
+  margin-top: 25px;
+  margin-left: 45px; 
+  margin-bottom: 30px;
+}
+h1{ 
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 3px 3px 20px #4848a5, -2px 1px 30px #613afc;
+    font-family: 'Fredoka', sans-serif;
+    display: inline-block;
+    text-align: center;
+    vertical-align:middle;
+    font-weight:900;
+    padding-left: 13px;
+    padding-top: 25px; 
+}
+footer{
+    text-align: center;
+    margin-top: 600px;
+    background-color: rgb(65, 60, 60);
+    color: rgb(0, 0, 0);
+    display: block;
+    padding: 10px;
+}
+.left_align {
+    text-align: left;
+    padding-left: 100px;
+    padding-right: 120px;
+    font-size: 15px;
+    text-align: center;
+    }
+    
+  .center_align {
+    text-align: center;
+    padding-left: 120px;
+    padding-right: 120px;
+    font-size: 15px;
+    text-align: center;
+    }
+    
+  .right_align {
+    text-align: right;
+    padding-left: 120px;
+    padding-right: 120px;
+    font-size: 15px;
+    text-align: center;
+    }
+
+.search {
+    position: relative;
+    box-shadow: 0 0 40px rgba(51, 51, 51, .1)
+}
+
+.search input {
+    height: 60px;
+    text-indent: 25px;
+    border: 2px solid #d6d4d4
+}
+
+.search button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 50px;
+    width: 110px;
+    background: blue;
+}
+.buttons{
+    text-align: center;
+    margin-left: 220px;
+    padding: 30px;
+    
+}
+
+#btn{
+    width: 67%;
+    /* text-align: center;
+    display: flex;
+    display: inline-block; */
+    margin: auto;
+}
